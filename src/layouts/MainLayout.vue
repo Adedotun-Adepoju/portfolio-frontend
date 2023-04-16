@@ -1,116 +1,77 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
+  <div class="main-container">
+    <div class="overall-section">
+      <nav class="nav-bar">
+        <div class="name-section">
+          <p>{{ name }}</p>
+        </div>
+        <div class="links-section">
+          <p v-for="(link, key) in links" :key="key">{{ link.label }}</p>
+        </div>
+      </nav>
+      <hr />
+      <div class="overview-section">
+        <h1>{{ name }}</h1>
+        <hr />
+        <h3>{{ jobRole }}</h3>
+        <div>
+          <p>About Me</p>
+        </div>
+      </div>
+    </div>
+    <ExperienceCard
+      :companyName="companyName"
+      :jobTitle="jobTitle"
+      :skills="skills"
+      :period="period"
     >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
-
-    <q-page-container>
-      <router-view />
-    </q-page-container>
-  </q-layout>
+    </ExperienceCard>
+  </div>
 </template>
 
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksList = [
-  {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
-  }
-]
-
-export default defineComponent({
-  name: 'MainLayout',
-
+import ExperienceCard from "src/components/experience-card/Experiences.vue";
+export default {
   components: {
-    EssentialLink
+    ExperienceCard,
   },
 
-  setup () {
-    const leftDrawerOpen = ref(false)
-
+  data() {
     return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer () {
-        leftDrawerOpen.value = !leftDrawerOpen.value
-      }
-    }
-  }
-})
+      name: "Adedotun Adepoju",
+      jobRole: "Data | Software Engineer",
+      links: {
+        about: {
+          label: "ABOUT",
+          to: "",
+        },
+        projects: {
+          label: "PROJECTS",
+          to: "",
+        },
+        resume: {
+          label: "RESUME",
+          to: "",
+        },
+        contact: {
+          label: "CONTACT",
+          to: "",
+        },
+      },
+      companyName: "B54",
+      jobTitle: "Data Engineer",
+      skills: ["Python", "SQL", "Javascript", "DBT", "GCP", "Metabase"],
+      period: {
+        startDate: "04.2022",
+        endDate: "Present",
+      },
+    };
+  },
+  computed: {},
+  methods: {},
+};
 </script>
+
+<style lang="scss" scoped>
+@import "./main.scss";
+</style>
