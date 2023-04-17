@@ -19,6 +19,13 @@
         </div>
       </div>
     </div>
+    <div class="about-section">
+      <h2>About Me</h2>
+      <div class="description-container">
+        <div class="skills-container"></div>
+        <div class="about"></div>
+      </div>
+    </div>
     <ExperienceCard
       :companyName="companyName"
       :jobTitle="jobTitle"
