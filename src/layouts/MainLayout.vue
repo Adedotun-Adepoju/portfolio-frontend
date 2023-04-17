@@ -33,7 +33,9 @@
             >
             </span>
           </div>
-          <div class="content"></div>
+          <div class="content">
+            <p class="text">I'm Adedotun Adepoju.</p>
+          </div>
         </div>
       </div>
     </div>

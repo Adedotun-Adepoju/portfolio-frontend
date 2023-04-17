@@ -82,6 +82,7 @@
       justify-content: space-around;
       height: 100%;
       width: 100%;
+      box-sizing: border-box;
 
       .skills-container {
         border: 1px solid #fff;
@@ -95,6 +96,7 @@
         height: 30%;
         width: 40%;
         margin-top: 70px;
+        box-sizing: border-box;
 
         .top {
           height: 20%;
@@ -104,13 +106,18 @@
           box-sizing: border-box;
           display: flex;
           gap: 15px;
+
+          .circle {
+            height: 40%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            display: inline-block;
+          }
         }
 
-        .circle {
-          height: 40%;
-          aspect-ratio: 1;
-          border-radius: 50%;
-          display: inline-block;
+        .content {
+          padding-left: 25px;
+          padding-top: 45px;
         }
       }
     }
