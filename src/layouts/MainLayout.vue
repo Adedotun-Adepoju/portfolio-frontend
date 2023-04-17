@@ -23,7 +23,18 @@
       <h2>About Me</h2>
       <div class="description-container">
         <div class="skills-container"></div>
-        <div class="about"></div>
+        <div class="about">
+          <div class="top">
+            <span
+              v-for="(icon, key) in icons"
+              :key="key"
+              class="circle"
+              :style="{ background: icon }"
+            >
+            </span>
+          </div>
+          <div class="content"></div>
+        </div>
       </div>
     </div>
     <ExperienceCard
@@ -72,6 +83,7 @@ export default {
         startDate: "04.2022",
         endDate: "Present",
       },
+      icons: ["red", "yellow", "green"],
     };
   },
   computed: {},

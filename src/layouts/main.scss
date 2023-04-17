@@ -68,13 +68,51 @@
   }
 
   .about-section {
-    background-color: rgb(138, 136, 128);
+    background-color: rgb(236 235 239);
     height: 80vh;
     padding-top: 70px;
 
     h2 {
       text-align: center;
       margin-top: 0px;
+    }
+
+    .description-container {
+      display: flex;
+      justify-content: space-around;
+      height: 100%;
+      width: 100%;
+
+      .skills-container {
+        border: 1px solid #fff;
+        width: 40px;
+        height: 50%;
+        width: 15%;
+      }
+
+      .about {
+        border: 1px solid #fff;
+        height: 30%;
+        width: 40%;
+        margin-top: 70px;
+
+        .top {
+          height: 20%;
+          background-color: #fff;
+          padding-top: 15px;
+          padding-left: 15px;
+          box-sizing: border-box;
+          display: flex;
+          gap: 15px;
+        }
+
+        .circle {
+          height: 40%;
+          aspect-ratio: 1;
+          border-radius: 50%;
+          display: inline-block;
+        }
+      }
     }
   }
 }
