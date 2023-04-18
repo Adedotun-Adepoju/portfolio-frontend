@@ -132,4 +132,16 @@
       }
     }
   }
+
+  .project-section {
+    background-color: rgb(235, 219, 176);
+    height: 60vh;
+    padding-top: 70px;
+
+    h5 {
+      margin-top: 0px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
 }

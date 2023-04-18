@@ -43,6 +43,12 @@
         </div>
       </div>
     </div>
+    <div class="project-section">
+      <h5>Projects</h5>
+      <div class="projects-container">
+        <template v-for="(project, key) in projects" :key="key"> </template>
+      </div>
+    </div>
     <ExperienceCard
       :companyName="companyName"
       :jobTitle="jobTitle"
@@ -107,6 +113,23 @@ export default {
         "css",
         "vue",
         "git",
+      ],
+      projects: [
+        {
+          title: "",
+          description: "",
+          imageLink: "",
+        },
+        {
+          title: "",
+          description: "",
+          imageLink: "",
+        },
+        {
+          title: "",
+          description: "",
+          imageLink: "",
+        },
       ],
     };
   },
