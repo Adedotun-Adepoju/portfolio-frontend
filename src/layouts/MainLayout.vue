@@ -22,7 +22,11 @@
     <div class="about-section">
       <h2>About Me</h2>
       <div class="description-container">
-        <div class="skills-container"></div>
+        <div class="skills-container">
+          <template v-for="(skill, key) in skillImages" :key="key">
+            <img :src="require(`../assets/img/${skill}.svg`)" />
+          </template>
+        </div>
         <div class="about">
           <div class="top">
             <span
@@ -86,6 +90,24 @@ export default {
         endDate: "Present",
       },
       icons: ["red", "yellow", "green"],
+      skillImages: [
+        "javascript",
+        "python",
+        "typescript",
+        "rails",
+        "nestjs",
+        "pg",
+        "docker",
+        "google",
+        "airflow",
+        "bigquery",
+        "dbt",
+        "pandas",
+        "html",
+        "css",
+        "vue",
+        "git",
+      ],
     };
   },
   computed: {},
