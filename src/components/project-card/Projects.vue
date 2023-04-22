@@ -4,8 +4,10 @@
       <img :src="imageLink" alt="" />
     </div>
     <div class="text-container">
-      <h2>{{ title }}</h2>
-      <h3>{{ description }}</h3>
+      <div class="year-wrapper">
+        <p>{{ year }}</p>
+      </div>
+      <p>{{ title }}</p>
     </div>
   </div>
 </template>
@@ -18,7 +20,7 @@ export default {
       type: String,
       required: true,
     },
-    description: {
+    year: {
       type: String,
       required: true,
     },
