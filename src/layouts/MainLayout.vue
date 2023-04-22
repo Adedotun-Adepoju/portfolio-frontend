@@ -57,6 +57,7 @@
         </template>
       </div>
     </div>
+    <div class="skills-section"></div>
     <ExperienceCard
       :companyName="companyName"
       :jobTitle="jobTitle"
