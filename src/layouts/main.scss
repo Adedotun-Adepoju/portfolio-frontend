@@ -167,5 +167,21 @@
       text-transform: uppercase;
       color: white;
     }
+
+    .skills-card-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      height: 30%;
+      padding-left: 15%;
+      padding-right: 15%;
+      gap: 2%;
+      flex-wrap: wrap;
+
+      .skill-card {
+        width: 9%;
+        margin-bottom: 20px;
+      }
+    }
   }
 }
