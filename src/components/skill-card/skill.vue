@@ -6,7 +6,9 @@
         alt=""
       />
     </div>
-    <div class="text"></div>
+    <div class="text">
+      <p>{{ name }}</p>
+    </div>
   </div>
 </template>
 

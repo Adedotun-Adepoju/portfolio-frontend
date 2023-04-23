@@ -161,43 +161,43 @@ export default {
       ],
       skills: [
         {
-          name: "airflow",
+          name: "Airflow",
           fileName: "airflow",
         },
         {
-          name: "css",
+          name: "CSS",
           fileName: "css",
         },
         {
-          name: "dbt",
+          name: "DBT",
           fileName: "dbt",
         },
         {
-          name: "html",
+          name: "HTML",
           fileName: "html",
         },
         {
-          name: "javascript",
+          name: "JavaScript",
           fileName: "javascript",
         },
         {
-          name: "typescript",
+          name: "TypeScript",
           fileName: "typescript",
         },
         {
-          name: "python",
+          name: "Python",
           fileName: "python",
         },
         {
-          name: "sql",
+          name: "SQL",
           fileName: "sql",
         },
         {
-          name: "docker",
+          name: "Docker",
           fileName: "docker",
         },
         {
-          name: "metabase",
+          name: "Metabase",
           fileName: "metabase",
         },
       ],
