@@ -11,9 +11,9 @@
       </nav>
       <hr />
       <div class="overview-section">
-        <h1>{{ name }}</h1>
+        <p class="name">{{ name }}</p>
         <hr />
-        <h3>{{ jobRole }}</h3>
+        <p class="title">{{ jobRole }}</p>
         <div>
           <p>About Me</p>
         </div>
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="skills-section">
-      <h5>Skills</h5>
+      <p>Skills</p>
       <div class="skills-card-container">
         <template v-for="(skill, key) in skills" :key="key">
           <SkillCard
@@ -69,6 +69,9 @@
           </SkillCard>
         </template>
       </div>
+    </div>
+    <div class="experience-section">
+      <p>Experience</p>
     </div>
     <!-- <ExperienceCard
       :companyName="companyName"
