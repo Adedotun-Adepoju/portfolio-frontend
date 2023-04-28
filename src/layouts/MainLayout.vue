@@ -73,7 +73,18 @@
     <div class="experience-section">
       <p>Experience</p>
       <div class="experience-container">
-        <div class="experience-list"></div>
+        <div class="experience-list">
+          <div class="vertical-step-line"></div>
+          <div
+            class="list-title"
+            @click="activateCompany(index)"
+            :style="`border-left: 3px solid ${computeBorderColor(index)}`"
+            v-for="(company, index) in companies"
+            :key="index"
+          >
+            <p :style="`color: ${computeBorderColor(index)}`">{{ company }}</p>
+          </div>
+        </div>
         <div class="experience-description"></div>
       </div>
       <!-- <template v-for="(experience, key) in experiences" :key="key">
@@ -237,7 +248,17 @@ export default {
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    activateCompany(index) {
+      this.currentIndex = index;
+    },
+
+    computeBorderColor(index) {
+      if (index == this.currentIndex) {
+        return "rgb(81, 233, 194)";
+      }
+    },
+  },
 };
 </script>
 
