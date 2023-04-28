@@ -72,6 +72,20 @@
     </div>
     <div class="experience-section">
       <p>Experience</p>
+      <div class="experience-container">
+        <div class="experience-list"></div>
+        <div class="experience-description"></div>
+      </div>
+      <!-- <template v-for="(experience, key) in experiences" :key="key">
+        <ExperienceCard
+          :companyName="experience.companyName"
+          :jobTitle="experience.jobTitle"
+          :tasks="experience.skills"
+          :period="experience.period"
+          class="experience-card"
+        >
+        </ExperienceCard>
+      </template> -->
     </div>
     <!-- <ExperienceCard
       :companyName="companyName"
@@ -115,12 +129,6 @@ export default {
           label: "CONTACT",
           to: "",
         },
-      },
-      companyName: "B54",
-      jobTitle: "Data Engineer",
-      period: {
-        startDate: "04.2022",
-        endDate: "Present",
       },
       icons: ["red", "yellow", "green"],
       skillImages: [
@@ -204,6 +212,28 @@ export default {
           fileName: "metabase",
         },
       ],
+      experiences: [
+        {
+          companyName: "B54",
+          jobTitle: "Data Engineer",
+          period: {
+            startDate: "04.2022",
+            endDate: "Present",
+          },
+          skills: ["DBT", "Javascript", "Typescript", "GCP"],
+        },
+        {
+          companyName: "B54",
+          jobTitle: "Data Engineer",
+          period: {
+            startDate: "04.2022",
+            endDate: "Present",
+          },
+          skills: ["DBT", "Javascript", "Typescript", "GCP"],
+        },
+      ],
+      companies: ["B54", "Verraki", "Hamoye"],
+      currentIndex: 0,
     };
   },
   computed: {},

@@ -1,16 +1,18 @@
 <template>
   <div class="main-container">
-    <div class="date-container">
-      <p class="experience-period">
-        {{ period.startDate }} - {{ period.endDate }}
+    <div class="title">
+      <p>
+        <span class="job-title">{{ jobTitle }}</span>
+        <span class="company"> @ {{ companyName }}</span>
       </p>
     </div>
-    <p class="job-title">{{ jobTitle }}</p>
-    <p class="text">{{ companyName }}</p>
-    <div class="skills-container">
-      <div v-for="(skill, key) in skills" :key="key" class="skill-wrapper">
-        <p>{{ skill }}</p>
-      </div>
+    <div class="sub-title">
+      <p>{{ period.startDate }} - {{ period.endDate }}</p>
+    </div>
+    <div class="body">
+      <ul>
+        <li v-for="(task, index) in tasks" :key="index">{{ task }}</li>
+      </ul>
     </div>
   </div>
 </template>
@@ -27,7 +29,7 @@ export default {
       type: String,
       required: true,
     },
-    skills: {
+    tasks: {
       type: Array,
       required: true,
     },
