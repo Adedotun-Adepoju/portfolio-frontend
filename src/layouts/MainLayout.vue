@@ -51,6 +51,7 @@
             :title="project.title"
             :imageLink="project.imageLink"
             :year="project.year"
+            @viewProject="viewProjectDescription(key)"
             class="project-card"
           >
           </ProjectCard>
@@ -98,6 +99,7 @@
         </div>
       </div>
     </div>
+    <ViewProject> </ViewProject>
     <footer>
       <div class="contact">
         <template v-for="(contact, index) in contacts" :key="index">
@@ -115,11 +117,13 @@
 import ExperienceCard from "src/components/experience-card/Experiences.vue";
 import ProjectCard from "src/components/project-card/Projects.vue";
 import SkillCard from "src/components/skill-card/skill.vue";
+import ViewProject from "src/components/view-project-modal/ViewProject.vue";
 export default {
   components: {
     ExperienceCard,
     ProjectCard,
     SkillCard,
+    ViewProject,
   },
 
   data() {
@@ -260,6 +264,8 @@ export default {
           link: "https://www.linkedin.com/in/adepoju-adedotun/",
         },
       ],
+      currentProjectIndex: 0,
+      showProjectModal: false,
     };
   },
   computed: {
@@ -284,6 +290,9 @@ export default {
     },
     companyRedirect(companyLink) {
       window.open(companyLink, "_blank");
+    },
+    viewProjectDescription(key) {
+      console.log(key);
     },
   },
 };
