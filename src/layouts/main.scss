@@ -229,13 +229,14 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          border-left: 3px solid white;
+          border-left: 3px solid rgb(131, 141, 175);
           padding-bottom: 2%;
           cursor: pointer;
 
           p {
             margin-top: 5%;
             font-size: 14px;
+            color: rgb(131, 141, 175);
           }
         }
       }
@@ -243,7 +244,7 @@
       .experience-description {
         width: 30%;
         // height: 300px;
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
       }
     }
 

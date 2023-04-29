@@ -85,18 +85,16 @@
             <p :style="`color: ${computeBorderColor(index)}`">{{ company }}</p>
           </div>
         </div>
-        <div class="experience-description"></div>
+        <div class="experience-description">
+          <ExperienceCard
+            :companyName="experience.companyName"
+            :jobTitle="experience.jobTitle"
+            :tasks="experience.skills"
+            :period="experience.period"
+          >
+          </ExperienceCard>
+        </div>
       </div>
-      <!-- <template v-for="(experience, key) in experiences" :key="key">
-        <ExperienceCard
-          :companyName="experience.companyName"
-          :jobTitle="experience.jobTitle"
-          :tasks="experience.skills"
-          :period="experience.period"
-          class="experience-card"
-        >
-        </ExperienceCard>
-      </template> -->
     </div>
     <!-- <ExperienceCard
       :companyName="companyName"
@@ -114,7 +112,7 @@ import ProjectCard from "src/components/project-card/Projects.vue";
 import SkillCard from "src/components/skill-card/skill.vue";
 export default {
   components: {
-    // ExperienceCard,
+    ExperienceCard,
     ProjectCard,
     SkillCard,
   },
@@ -234,7 +232,7 @@ export default {
           skills: ["DBT", "Javascript", "Typescript", "GCP"],
         },
         {
-          companyName: "B54",
+          companyName: "Verraki",
           jobTitle: "Data Engineer",
           period: {
             startDate: "04.2022",
@@ -247,7 +245,11 @@ export default {
       currentIndex: 0,
     };
   },
-  computed: {},
+  computed: {
+    experience() {
+      return this.experiences[this.currentIndex];
+    },
+  },
   methods: {
     activateCompany(index) {
       this.currentIndex = index;
