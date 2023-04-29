@@ -96,13 +96,16 @@
         </div>
       </div>
     </div>
-    <!-- <ExperienceCard
-      :companyName="companyName"
-      :jobTitle="jobTitle"
-      :skills="skills"
-      :period="period"
-    >
-    </ExperienceCard> -->
+    <footer>
+      <div class="contact">
+        <template v-for="(contact, index) in contacts" :key="index">
+          <img
+            :src="require(`../assets/img/${contact.name}.svg`)"
+            @click="redirectContact(index)"
+          />
+        </template>
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -238,11 +241,21 @@ export default {
             startDate: "04.2022",
             endDate: "Present",
           },
-          skills: ["DBT", "Javascript", "Typescript", "GCP"],
+          skills: ["DBT", "Javascript", "Typescript", "GCP", "Tableau"],
         },
       ],
       companies: ["B54", "Verraki", "Hamoye"],
       currentIndex: 0,
+      contacts: [
+        {
+          name: "github",
+          link: "https://github.com/Adedotun-Adepoju/",
+        },
+        {
+          name: "linkedin",
+          link: "https://www.linkedin.com/in/adepoju-adedotun/",
+        },
+      ],
     };
   },
   computed: {
@@ -259,6 +272,11 @@ export default {
       if (index == this.currentIndex) {
         return "rgb(81, 233, 194)";
       }
+    },
+
+    redirectContact(index) {
+      const link = this.contacts[index].link;
+      window.open(link, "_blank");
     },
   },
 };

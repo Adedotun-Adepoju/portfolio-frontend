@@ -252,4 +252,24 @@
       width: 40%;
     }
   }
+
+  footer {
+    background-color: rgb(23, 23, 23);
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 2%;
+      width: 100%;
+
+      img {
+        width: 2%;
+        cursor: pointer;
+      }
+    }
+  }
 }
