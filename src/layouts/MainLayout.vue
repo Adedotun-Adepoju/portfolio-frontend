@@ -91,6 +91,8 @@
             :jobTitle="experience.jobTitle"
             :tasks="experience.skills"
             :period="experience.period"
+            :link="experience.link"
+            @companyPageRedirect="companyRedirect($event)"
           >
           </ExperienceCard>
         </div>
@@ -233,6 +235,7 @@ export default {
             endDate: "Present",
           },
           skills: ["DBT", "Javascript", "Typescript", "GCP"],
+          link: "https://b54.co/",
         },
         {
           companyName: "Verraki",
@@ -242,6 +245,7 @@ export default {
             endDate: "Present",
           },
           skills: ["DBT", "Javascript", "Typescript", "GCP", "Tableau"],
+          link: "https://verraki.africa/",
         },
       ],
       companies: ["B54", "Verraki", "Hamoye"],
@@ -277,6 +281,9 @@ export default {
     redirectContact(index) {
       const link = this.contacts[index].link;
       window.open(link, "_blank");
+    },
+    companyRedirect(companyLink) {
+      window.open(companyLink, "_blank");
     },
   },
 };

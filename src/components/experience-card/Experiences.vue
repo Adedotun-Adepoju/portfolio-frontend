@@ -3,7 +3,7 @@
     <div class="title">
       <p>
         <span class="job-title">{{ jobTitle }}</span>
-        <span class="company"> @ {{ companyName }}</span>
+        <span class="company" @click="redirect"> @ {{ companyName }}</span>
       </p>
     </div>
     <div class="sub-title">
@@ -35,6 +35,16 @@ export default {
     },
     period: {
       type: Object,
+    },
+    link: {
+      type: Object,
+      required: true,
+    },
+  },
+
+  methods: {
+    redirect() {
+      this.$emit("companyPageRedirect", this.link);
     },
   },
 };
