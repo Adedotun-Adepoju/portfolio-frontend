@@ -6,7 +6,14 @@
           <p>{{ name }}</p>
         </div>
         <div class="links-section">
-          <p v-for="(link, key) in links" :key="key">{{ link.label }}</p>
+          <p
+            :href="`#${key}`"
+            v-for="(link, key) in links"
+            :key="key"
+            @click="navigatePage(key)"
+          >
+            {{ link.label }}
+          </p>
         </div>
       </nav>
       <hr />
@@ -19,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="about-section">
+    <div class="about-section" id="about">
       <h2>About Me</h2>
       <div class="description-container">
         <div class="skills-container">
@@ -43,7 +50,7 @@
         </div>
       </div>
     </div>
-    <div class="project-section">
+    <div class="project-section" id="projects">
       <h5>Projects</h5>
       <div class="projects-container">
         <template v-for="(project, key) in projects" :key="key">
@@ -110,7 +117,7 @@
     >
     </ViewProject>
     <footer>
-      <div class="contact">
+      <div class="contact" id="contact">
         <template v-for="(contact, index) in contacts" :key="index">
           <img
             :src="require(`../assets/img/${contact.name}.svg`)"
@@ -313,6 +320,16 @@ export default {
     },
     closeProjectDescriptionModal() {
       this.showProjectModal = false;
+    },
+    navigatePage(linkName) {
+      if (linkName == "resume") {
+        window.open("https://www.google.com");
+      } else {
+        const element = document.getElementById(linkName);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     },
   },
 };
