@@ -22,7 +22,7 @@
         <hr />
         <p class="title">{{ jobRole }}</p>
         <div>
-          <p>About Me</p>
+          <p @click="navigatePage('about')">About Me</p>
         </div>
       </div>
     </div>
