@@ -20,7 +20,15 @@ export default store(function (/* { ssrContext } */) {
     },
     state: {
       projects: [],
-      experiences: [],
+      experiences: [
+        {
+          company: "",
+          job_title: "",
+          roles: "",
+          period: "",
+          links: "",
+        },
+      ],
     },
     getters: {
       projects(state) {

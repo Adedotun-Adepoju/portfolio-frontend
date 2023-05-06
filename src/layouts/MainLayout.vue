@@ -65,19 +65,6 @@
         </template>
       </div>
     </div>
-    <div class="skills-section">
-      <p>Skills</p>
-      <div class="skills-card-container">
-        <template v-for="(skill, key) in skills" :key="key">
-          <SkillCard
-            :name="skill.name"
-            :fileName="skill.fileName"
-            class="skill-card"
-          >
-          </SkillCard>
-        </template>
-      </div>
-    </div>
     <div class="experience-section">
       <p>Experience</p>
       <div class="experience-container">
@@ -98,12 +85,25 @@
             :companyName="experience.company"
             :jobTitle="experience.job_title"
             :tasks="experience.roles"
-            :period="period(experience.start_date, experience.end)"
+            :period="period(experience.start_date, experience.end_date)"
             :link="experience.link"
             @companyPageRedirect="companyRedirect($event)"
           >
           </ExperienceCard>
         </div>
+      </div>
+    </div>
+    <div class="skills-section">
+      <p>Skills</p>
+      <div class="skills-card-container">
+        <template v-for="(skill, key) in skills" :key="key">
+          <SkillCard
+            :name="skill.name"
+            :fileName="skill.fileName"
+            class="skill-card"
+          >
+          </SkillCard>
+        </template>
       </div>
     </div>
     <ViewProject
@@ -234,29 +234,6 @@ export default {
           fileName: "metabase",
         },
       ],
-      // experiences: [
-      //   {
-      //     companyName: "B54",
-      //     jobTitle: "Data Engineer",
-      //     period: {
-      //       startDate: "04.2022",
-      //       endDate: "Present",
-      //     },
-      //     skills: ["DBT", "Javascript", "Typescript", "GCP"],
-      //     link: "https://b54.co/",
-      //   },
-      //   {
-      //     companyName: "Verraki",
-      //     jobTitle: "Data Engineer",
-      //     period: {
-      //       startDate: "04.2022",
-      //       endDate: "Present",
-      //     },
-      //     skills: ["DBT", "Javascript", "Typescript", "GCP", "Tableau"],
-      //     link: "https://verraki.africa/",
-      //   },
-      // ],
-      // companies: ["B54", "Verraki"],
       currentIndex: 0,
       contacts: [
         {
@@ -275,7 +252,6 @@ export default {
   computed: {
     ...mapGetters(["projects", "experiences"]),
     experience() {
-      console.log("here", this.experiences);
       return this.experiences[this.currentIndex];
     },
     currentProject() {
@@ -325,6 +301,7 @@ export default {
       }
     },
     period(startDate, endDate) {
+      console.log(endDate);
       if (endDate) {
         return {
           startDate,
