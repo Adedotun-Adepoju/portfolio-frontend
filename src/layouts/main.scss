@@ -89,7 +89,7 @@
       box-sizing: border-box;
 
       .skills-container {
-        border: 1px solid #fff;
+        // border: 1px solid #fff;
         height: 70%;
         width: 15%;
         display: flex;
@@ -131,8 +131,13 @@
         }
 
         .content {
-          padding-left: 25px;
-          padding-top: 45px;
+          padding-left: 2%;
+          padding-top: 3%;
+          padding-right: 3%;
+
+          .text {
+            line-height: 3em;
+          }
         }
       }
     }

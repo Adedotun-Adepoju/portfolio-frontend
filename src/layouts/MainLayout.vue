@@ -18,7 +18,7 @@
       </nav>
       <hr />
       <div class="overview-section">
-        <p class="name">{{ name }}</p>
+        <p class="name">Hi, I'm {{ name }}</p>
         <hr />
         <p class="title">{{ jobRole }}</p>
         <div>
@@ -45,7 +45,7 @@
             </span>
           </div>
           <div class="content">
-            <p class="text">I'm Adedotun Adepoju.</p>
+            <p class="text">{{ about }}.</p>
           </div>
         </div>
       </div>
@@ -112,6 +112,8 @@
       :imageLink="currentProject.image_link"
       :description="currentProject.description"
       :skills="currentProject.skills"
+      :githubLink="currentProject.github_link"
+      :demoLink="currentProject.demo_link"
       class="view-project-modal"
       @closeModal="closeProjectDescriptionModal"
     >
@@ -152,6 +154,8 @@ export default {
   data() {
     return {
       loaded: false,
+      about:
+        "Hello, I'm Adedotun. A data & Software Engineer experienced in developing software solutions for data driven applications. Over the last few years, I've had the opportunity to develop a number of problem solving solutions. My work includes setting up data pipelines, creating backend servers, and implementing machine learning models to solve business problems.",
       name: "Adedotun Adepoju",
       jobRole: "Data | Software Engineer",
       links: {
@@ -301,7 +305,6 @@ export default {
       }
     },
     period(startDate, endDate) {
-      console.log(endDate);
       if (endDate) {
         return {
           startDate,
