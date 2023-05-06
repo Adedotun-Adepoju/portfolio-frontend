@@ -167,7 +167,7 @@
   }
 
   .skills-section {
-    background-color: rgb(23, 23, 23);
+    background-color: rgb(124, 121, 121);
     padding-top: 2%;
 
     p {
@@ -257,8 +257,18 @@
     background-color: rgb(23, 23, 23);
     height: 20vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20%;
+
+    p {
+      font-size: 1.5em;
+      text-transform: uppercase;
+      margin: 0 auto;
+      letter-spacing: 0.5em;
+      color: #fff;
+    }
 
     .contact {
       display: flex;

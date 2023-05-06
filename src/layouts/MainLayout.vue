@@ -119,6 +119,7 @@
     >
     </ViewProject>
     <footer>
+      <p>Contact</p>
       <div class="contact" id="contact">
         <template v-for="(contact, index) in contacts" :key="index">
           <img
@@ -247,6 +248,10 @@ export default {
         {
           name: "linkedin",
           link: "https://www.linkedin.com/in/adepoju-adedotun/",
+        },
+        {
+          name: "email",
+          link: "mailto:d.e.adepoju@gmail.com",
         },
       ],
       currentProjectIndex: 0,
