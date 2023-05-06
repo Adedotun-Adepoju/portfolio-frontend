@@ -7,7 +7,9 @@
       </p>
     </div>
     <div class="sub-title">
-      <p>{{ period.startDate }} - {{ period.endDate }}</p>
+      <p>
+        {{ formatDate(period.startDate) }} - {{ formatDate(period.endDate) }}
+      </p>
     </div>
     <div class="body">
       <ul>
@@ -45,6 +47,16 @@ export default {
   methods: {
     redirect() {
       this.$emit("companyPageRedirect", this.link);
+    },
+    formatDate(dateString) {
+      if (dateString.toLowerCase() == "present") {
+        return dateString;
+      }
+      const date = new Date(dateString);
+      const month = date.toLocaleString("default", { month: "long" });
+      const year = date.getFullYear();
+
+      return `${month} ${year}`;
     },
   },
 };
