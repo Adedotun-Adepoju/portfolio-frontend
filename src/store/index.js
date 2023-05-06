@@ -1,5 +1,6 @@
-import { store } from 'quasar/wrappers'
-import { createStore } from 'vuex'
+import { store } from "quasar/wrappers";
+import { createStore } from "vuex";
+import api from "../api/portfolio";
 
 // import example from './module-example'
 
@@ -17,11 +18,58 @@ export default store(function (/* { ssrContext } */) {
     modules: {
       // example
     },
+    state: {
+      projects: [],
+      experiences: [
+        {
+          company: "",
+          job_title: "",
+          roles: "",
+          period: "",
+          links: "",
+        },
+      ],
+    },
+    getters: {
+      projects(state) {
+        return state.projects;
+      },
+      experiences(state) {
+        return state.experiences;
+      },
+    },
+    mutations: {
+      FETCH_PROJECTS(state, data) {
+        state.projects = data;
+      },
+      FETCH_EXPERIENCES(state, data) {
+        state.experiences = data;
+      },
+    },
+    actions: {
+      async fetchProjects({ commit }) {
+        try {
+          const response = await api.fetchProjects();
+          commit("FETCH_PROJECTS", response.data);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
+      async fetchExperiences({ commit }) {
+        try {
+          const response = await api.fetchExperiences();
+          commit("FETCH_EXPERIENCES", response.data);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+    },
 
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only
-    strict: process.env.DEBUGGING
-  })
+    strict: process.env.DEBUGGING,
+  });
 
-  return Store
-})
+  return Store;
+});

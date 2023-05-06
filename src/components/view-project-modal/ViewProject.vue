@@ -27,6 +27,10 @@
           />
         </template>
       </div>
+      <div class="project-info">
+        <p @click="goToGithub">Github</p>
+        <p @click="goToDemo">View project</p>
+      </div>
     </div>
   </q-dialog>
 </template>
@@ -51,10 +55,24 @@ export default {
       type: Array,
       required: true,
     },
+    githubLink: {
+      type: String,
+      required: true,
+    },
+    demoLink: {
+      type: String,
+      required: true,
+    },
   },
   methods: {
     toggleDialogVisible() {
       this.$emit("closeModal");
+    },
+    goToGithub() {
+      window.open(this.githubLink);
+    },
+    goToDemo() {
+      window.open(this.demoLink);
     },
   },
   data() {
