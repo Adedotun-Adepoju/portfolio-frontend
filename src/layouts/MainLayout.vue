@@ -296,7 +296,9 @@ export default {
     },
     navigatePage(linkName) {
       if (linkName == "resume") {
-        window.open("https://www.google.com");
+        window.open(
+          "https://drive.google.com/file/d/1KtFse7TuSCz_bTLamFTHbgW14UyKuxeL/view?usp=share_link"
+        );
       } else {
         const element = document.getElementById(linkName);
         if (element) {
