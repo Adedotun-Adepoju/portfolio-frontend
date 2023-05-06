@@ -26,6 +26,9 @@ export default store(function (/* { ssrContext } */) {
       projects(state) {
         return state.projects;
       },
+      experiences(state) {
+        return state.experiences;
+      },
     },
     mutations: {
       FETCH_PROJECTS(state, data) {
@@ -40,6 +43,15 @@ export default store(function (/* { ssrContext } */) {
         try {
           const response = await api.fetchProjects();
           commit("FETCH_PROJECTS", response.data);
+        } catch (error) {
+          console.log(error);
+        }
+      },
+
+      async fetchExperiences({ commit }) {
+        try {
+          const response = await api.fetchExperiences();
+          commit("FETCH_EXPERIENCES", response.data);
         } catch (error) {
           console.log(error);
         }
