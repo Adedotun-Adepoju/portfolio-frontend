@@ -25,12 +25,8 @@ module.exports = configure(function (ctx) {
     // https://v2.quasar.dev/quasar-cli-webpack/boot-files
     boot: [],
 
-    css: {
-      scss: true,
-    },
-
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-css
-    css: ["app.scss"],
+    css: ["app.css"],
 
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
@@ -49,13 +45,6 @@ module.exports = configure(function (ctx) {
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
       vueRouterMode: "hash", // available values: 'hash', 'history'
-
-      sassOptions: {
-        indentedSyntax: false,
-      },
-      scss: {
-        // options for scss
-      },
 
       // transpile: false,
       // publicPath: '/',
