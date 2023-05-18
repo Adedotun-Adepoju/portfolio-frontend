@@ -50,6 +50,13 @@ module.exports = configure(function (ctx) {
     build: {
       vueRouterMode: "hash", // available values: 'hash', 'history'
 
+      sassOptions: {
+        indentedSyntax: false,
+      },
+      scss: {
+        // options for scss
+      },
+
       // transpile: false,
       // publicPath: '/',
 
