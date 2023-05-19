@@ -137,7 +137,8 @@ import ExperienceCard from "src/components/experience-card/Experiences.vue";
 import ProjectCard from "src/components/project-card/Projects.vue";
 import SkillCard from "src/components/skill-card/skill.vue";
 import ViewProject from "src/components/view-project-modal/ViewProject.vue";
-import { mapActions, mapGetters } from "vuex";
+import { projects, experiences, skills } from "src/data/constants";
+
 export default {
   components: {
     ExperienceCard,
@@ -154,6 +155,9 @@ export default {
 
   data() {
     return {
+      skills: skills,
+      projects: projects,
+      experiences: experiences,
       loaded: false,
       about:
         "Hello, I'm Adedotun. A data & Software Engineer experienced in developing software solutions for data driven applications. Over the last few years, I've had the opportunity to develop a number of problem solving solutions. My work includes setting up data pipelines, creating backend servers, and implementing machine learning models to solve business problems.",
@@ -162,19 +166,15 @@ export default {
       links: {
         about: {
           label: "ABOUT",
-          to: "",
         },
         projects: {
           label: "PROJECTS",
-          to: "",
         },
         resume: {
           label: "RESUME",
-          to: "",
         },
         contact: {
           label: "CONTACT",
-          to: "",
         },
       },
       icons: ["red", "yellow", "green"],
@@ -197,48 +197,6 @@ export default {
         "git",
       ],
 
-      skills: [
-        {
-          name: "Airflow",
-          fileName: "airflow",
-        },
-        {
-          name: "CSS",
-          fileName: "css",
-        },
-        {
-          name: "DBT",
-          fileName: "dbt",
-        },
-        {
-          name: "HTML",
-          fileName: "html",
-        },
-        {
-          name: "JavaScript",
-          fileName: "javascript",
-        },
-        {
-          name: "TypeScript",
-          fileName: "typescript",
-        },
-        {
-          name: "Python",
-          fileName: "python",
-        },
-        {
-          name: "SQL",
-          fileName: "sql",
-        },
-        {
-          name: "Docker",
-          fileName: "docker",
-        },
-        {
-          name: "Metabase",
-          fileName: "metabase",
-        },
-      ],
       currentIndex: 0,
       contacts: [
         {
@@ -259,7 +217,6 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(["projects", "experiences"]),
     experience() {
       return this.experiences[this.currentIndex];
     },
