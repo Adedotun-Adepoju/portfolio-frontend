@@ -18,36 +18,13 @@
       </nav>
       <hr />
       <div class="overview-section">
-        <p class="name">Hi, I'm {{ name }}</p>
+        <p class="name">
+          <span class="first-line">Hi, my name is</span>
+          <span class="second-line">{{ name }}.</span>
+          <span class="third-line">I develop data driven applications.</span>
+        </p>
         <hr />
-        <p class="title">{{ jobRole }}</p>
-        <div>
-          <p @click="navigatePage('about')">About Me</p>
-        </div>
-      </div>
-    </div>
-    <div class="about-section" id="about">
-      <h2>About Me</h2>
-      <div class="description-container">
-        <div class="skills-container">
-          <template v-for="(skill, key) in skillImages" :key="key">
-            <img :src="require(`../assets/img/${skill}.svg`)" />
-          </template>
-        </div>
-        <div class="about">
-          <div class="top">
-            <span
-              v-for="(icon, key) in icons"
-              :key="key"
-              class="circle"
-              :style="{ background: icon }"
-            >
-            </span>
-          </div>
-          <div class="content">
-            <p class="text">{{ about }}.</p>
-          </div>
-        </div>
+        <p class="about">{{ about }}</p>
       </div>
     </div>
     <div class="project-section" id="projects">
@@ -58,6 +35,9 @@
             :title="project.name"
             :imageLink="project.image_link"
             :year="project.year"
+            :skills="project.skills"
+            :githubLink="project.github_link"
+            :demoLink="project.demo_link"
             @viewProject="openProjectDescriptionModal(key)"
             class="project-card"
           >
@@ -160,7 +140,7 @@ export default {
       experiences: experiences,
       loaded: false,
       about:
-        "Hello, I'm Adedotun. A data & Software Engineer experienced in developing software solutions for data driven applications. Over the last few years, I've had the opportunity to develop a number of problem solving solutions. My work includes setting up data pipelines, creating backend servers, and implementing machine learning models to solve business problems.",
+        "I'm a data & software Engineer passionate about developing data driven software solutions for solving problems. Currently, I'm focused on building effective data pipelines and robust backend services",
       name: "Adedotun Adepoju",
       jobRole: "Data | Software Engineer",
       links: {
@@ -178,24 +158,6 @@ export default {
         },
       },
       icons: ["red", "yellow", "green"],
-      skillImages: [
-        "javascript",
-        "python",
-        "typescript",
-        "rails",
-        "nestjs",
-        "pg",
-        "docker",
-        "google",
-        "airflow",
-        "bigquery",
-        "dbt",
-        "pandas",
-        "html",
-        "css",
-        "vue",
-        "git",
-      ],
 
       currentIndex: 0,
       contacts: [
@@ -238,7 +200,7 @@ export default {
 
     computeBorderColor(index) {
       if (index == this.currentIndex) {
-        return "rgb(81, 233, 194)";
+        return "rgb(179, 74, 55)";
       }
     },
 
