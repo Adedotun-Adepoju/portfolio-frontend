@@ -21,7 +21,8 @@
         <p class="name">
           <span class="first-line">Hi, my name is</span>
           <span class="second-line">{{ name }}.</span>
-          <span class="third-line">I develop data driven applications.</span>
+          <span class="third-line">Data | Software Engineer at B54</span>
+          <span class="fourth-line">I develop data driven applications.</span>
         </p>
         <hr />
         <p class="about">{{ about }}</p>
@@ -45,7 +46,7 @@
         </template>
       </div>
     </div>
-    <div class="experience-section">
+    <div class="experience-section" id="experiences">
       <p>Experience</p>
       <div class="experience-container">
         <div class="experience-list">
@@ -144,17 +145,17 @@ export default {
       name: "Adedotun Adepoju",
       jobRole: "Data | Software Engineer",
       links: {
-        about: {
-          label: "ABOUT",
-        },
         projects: {
           label: "PROJECTS",
         },
-        resume: {
-          label: "RESUME",
+        experiences: {
+          label: "EXPERIENCES",
         },
         contact: {
           label: "CONTACT",
+        },
+        resume: {
+          label: "RESUME",
         },
       },
       icons: ["red", "yellow", "green"],
