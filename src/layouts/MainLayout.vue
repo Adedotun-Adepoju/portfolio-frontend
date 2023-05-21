@@ -50,7 +50,7 @@
       <p>Experience</p>
       <div class="experience-container">
         <div class="experience-list">
-          <div class="vertical-step-line"></div>
+          <!-- <div class="vertical-step-line"></div> -->
           <div
             class="list-title"
             @click="activateCompany(index)"

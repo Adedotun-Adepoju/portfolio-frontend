@@ -178,8 +178,6 @@
 
       .experience-description {
         width: 30%;
-        // height: 300px;
-        // border: 1px solid #fff;
       }
     }
 
@@ -285,6 +283,32 @@
           margin-top: 3%;
           text-align: left;
           font-weight: lighter;
+        }
+      }
+    }
+    .project-section {
+      .projects-container {
+        flex-direction: column;
+
+        .project-card {
+          width: 100%;
+        }
+      }
+    }
+
+    .experience-section {
+      .experience-container {
+        margin: 0;
+        justify-content: space-between;
+        display: block;
+
+        .experience-list {
+          width: 100%;
+
+          .list-title {
+            display: flex;
+            flex-direction: row;
+          }
         }
       }
     }
