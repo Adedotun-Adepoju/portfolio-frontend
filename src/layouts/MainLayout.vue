@@ -54,7 +54,9 @@
           <div
             class="list-title"
             @click="activateCompany(index)"
-            :style="`border-left: 3px solid ${computeBorderColor(index)}`"
+            :style="{
+              '--border-color': computeBorderColor(index),
+            }"
             v-for="(company, index) in companies"
             :key="index"
           >
@@ -202,6 +204,8 @@ export default {
     computeBorderColor(index) {
       if (index == this.currentIndex) {
         return "rgb(179, 74, 55)";
+      } else {
+        return "rgb(131, 141, 175)";
       }
     },
 
