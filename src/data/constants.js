@@ -43,6 +43,14 @@ export const experiences = [
     ],
   },
   {
+    company: "Verraki",
+    job_title: "Analyst",
+    start_date: "2021-06-01",
+    end_date: "2022-04-30",
+    link: "https://verraki.africa/",
+    roles: ["Analysed various datasets", "Cleaned datasets with python"],
+  },
+  {
     company: "iQube labs",
     job_title: "Data Science Intern",
     start_date: "2021-03-01",
@@ -66,14 +74,6 @@ export const experiences = [
       "Implemented an ensemble machine learning model to classify the quality metrics of the ecological footprint data for different countries",
       "Created a multi-label classification model of satellite images in the amazon rainforest using Deep learning",
     ],
-  },
-  {
-    company: "Verraki",
-    job_title: "Analyst",
-    start_date: "2021-06-01",
-    end_date: "2022-04-30",
-    link: "https://verraki.africa/",
-    roles: ["Analysed various datasets", "Cleaned datasets with python"],
   },
 ];
 
