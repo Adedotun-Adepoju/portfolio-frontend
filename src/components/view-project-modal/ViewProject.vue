@@ -1,5 +1,5 @@
 <template>
-  <q-dialog v-model="dialogVisible">
+  <q-dialog v-model="dialogVisible" :persistent="true">
     <div class="main-container">
       <div class="cancel" @click="toggleDialogVisible">
         <p>X</p>
@@ -28,7 +28,7 @@
         </template>
       </div>
       <div class="project-info">
-        <p @click="goToGithub">Github</p>
+        <p @click="toggleDialogVisible">Cancel</p>
         <p @click="goToDemo">View project</p>
       </div>
     </div>
