@@ -18,14 +18,20 @@
       </nav>
       <hr />
       <div class="overview-section">
-        <p class="name">
-          <span class="first-line">Hi, my name is</span>
-          <span class="second-line">{{ name }}.</span>
-          <span class="third-line">Data | Software Engineer at B54</span>
-          <span class="fourth-line">I develop data driven applications.</span>
-        </p>
-        <hr />
-        <p class="about">{{ about }}</p>
+        <div class="profile-overview">
+          <p class="name">
+            <span class="first-line">Hi, my name is</span>
+            <span class="second-line">{{ name }}.</span>
+            <span class="third-line">Data | Software Engineer at B54</span>
+            <img src="../assets/img/profile.jpeg" />
+            <span class="fourth-line">I develop data driven applications.</span>
+          </p>
+          <hr />
+          <p class="about">{{ about }}</p>
+        </div>
+        <div class="profile-picture">
+          <img src="../assets/img/profile.jpeg" />
+        </div>
       </div>
     </div>
     <div class="project-section" id="projects">
