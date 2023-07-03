@@ -22,7 +22,8 @@ export const projects = [
     year: 2022,
     skills: ["Airflow", "DBT", "Python", "Gcp"],
     github_link: "https://github.com/Adedotun-Adepoju/football-stats-pipeline",
-    demo_link: "https://github.com/Adedotun-Adepoju/football-stats-pipeline",
+    demo_link:
+      "https://lookerstudio.google.com/u/0/reporting/664607fb-989d-4077-aa1e-7a569f85cdb3/page/CAY9C?s=nwwjr72VXuo",
     created_at: "2023-05-16T22:30:12.889Z",
     updated_at: "2023-05-16T22:30:12.889Z",
   },
