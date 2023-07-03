@@ -1,12 +1,26 @@
 export const projects = [
   {
+    name: "Music streaming data pipeline",
+    description:
+      "A streaming data pipeline set up to monitor streams from a music event generator. Events are published to Apache Kafka and Apache Spark was configured to consume and process this data. View more about the project below",
+    image_link:
+      "https://scontent-los2-1.xx.fbcdn.net/v/t1.6435-9/184205866_309950770525058_7072329262818108856_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=e3f864&_nc_ohc=OBAm4K-fv4AAX-ND4G_&_nc_ht=scontent-los2-1.xx&oh=00_AfBM3q_XcCI5_Nw2TXk0McZ9hjuiuStWVzmMZO4ThzgQDA&oe=64CA9C07",
+    year: 2023,
+    skills: ["Apache Kafka", "Apache Spark", "Airflow", "Python", "Gcp"],
+    github_link: "https://github.com/Adedotun-Adepoju/music-streaming-pipeline",
+    demo_link:
+      "https://lookerstudio.google.com/reporting/588256e3-81f3-4fe3-9241-e4ee8e350326",
+    created_at: "2023-05-16T22:30:30.495Z",
+    updated_at: "2023-05-16T22:30:30.495Z",
+  },
+  {
     name: "Football Stats ETL Pipeline",
     description:
       "A data pipeline set up to monitor the performances of teams in the English premier league by extracting raw data from API endpoints and transforming the raw data using python, Apache Airflow, BigQuery and DBT",
     image_link:
       "https://cdn.pixabay.com/photo/2016/05/27/14/33/football-1419954_1280.jpg",
     year: 2022,
-    skills: ["Airflow", "DBT", "Python"],
+    skills: ["Airflow", "DBT", "Python", "Gcp"],
     github_link: "https://github.com/Adedotun-Adepoju/football-stats-pipeline",
     demo_link: "https://github.com/Adedotun-Adepoju/football-stats-pipeline",
     created_at: "2023-05-16T22:30:12.889Z",

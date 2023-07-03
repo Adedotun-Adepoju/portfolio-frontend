@@ -22,7 +22,7 @@
           <p class="name">
             <span class="first-line">Hi, my name is</span>
             <span class="second-line">{{ name }}.</span>
-            <span class="third-line">Data | Software Engineer at B54</span>
+            <span class="third-line">Data | Software Engineer</span>
             <img src="../assets/img/profile.jpeg" />
             <span class="fourth-line">I develop data driven applications.</span>
           </p>

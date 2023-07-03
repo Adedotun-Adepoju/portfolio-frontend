@@ -21,7 +21,7 @@
       <div class="skills-container">
         <template v-for="(skill, index) in skills" :key="index">
           <img
-            :src="require(`../../assets/img/${skill.toLowerCase()}.svg`)"
+            :src="require(`../../assets/img/${getSkillImage(skill)}.svg`)"
             alt=""
             class="skill-image"
           />
@@ -73,6 +73,9 @@ export default {
     },
     goToDemo() {
       window.open(this.demoLink);
+    },
+    getSkillImage(skill) {
+      return skill.replaceAll(" ", "_").toLowerCase();
     },
   },
   data() {

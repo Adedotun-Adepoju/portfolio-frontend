@@ -14,7 +14,7 @@
     <div class="project-description">
       <p @click="viewProject">View description</p>
       <p @click="goToGithub">View project code</p>
-      <p @click="goToDemo">View demo</p>
+      <p @click="goToDemo">View Dashboard</p>
     </div>
   </div>
 </template>
