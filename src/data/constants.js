@@ -50,11 +50,12 @@ export const experiences = [
     end_date: null,
     link: "https://b54.co/",
     roles: [
-      "Ingested data from various sources. Implemented an automated ELT pipeline making it easier to wrangle data thereby increasing business efficiency by 100%.",
-      "Communicated with relevant stakeholders to understand needs, and translated feedbacks into actionable reports in Metabase, saving 40 hours of manual work each month",
+      "Ingested data from various sources. Implemented an automated ELT pipeline making it easier to wrangle data.",
+      "Communicated with relevant stakeholders to understand needs, and translated feedbacks into actionable reports in Metabase",
       "Eliminated 80% of manual tasks for credit underwriting by engineering backend services to automate the risk and credit analysis process",
       "Integrated data from multiple third-party APIs that provided financial data, leading to better risk analysis.",
       "Developed machine learning models to predict the probability of loan defaults.",
+      "Implemented Automated unit tests using test frameworks such as Jest and AdonisJS testing framework to ensure adequate coverage of the backend codebase",
     ],
   },
   {
@@ -63,7 +64,11 @@ export const experiences = [
     start_date: "2021-06-01",
     end_date: "2022-04-30",
     link: "https://verraki.africa/",
-    roles: ["Analysed various datasets", "Cleaned datasets with python"],
+    roles: [
+      "Cleaned and processed large datasets with python",
+      "Analyzed various datasets to answer business questions",
+      "Generated Tableau Dashboard charts to present key findings to stakeholders ",
+    ],
   },
   {
     company: "iQube labs",
