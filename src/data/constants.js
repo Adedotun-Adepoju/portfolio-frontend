@@ -9,7 +9,7 @@ export const projects = [
     skills: ["Apache Kafka", "Apache Spark", "Airflow", "Python", "Gcp"],
     github_link: "https://github.com/Adedotun-Adepoju/music-streaming-pipeline",
     demo_link:
-      "https://lookerstudio.google.com/reporting/588256e3-81f3-4fe3-9241-e4ee8e350326",
+      "https://public.tableau.com/views/MusicStreamsDashboard/Dashboard2?:language=en-US&:display_count=n&:origin=viz_share_link",
     created_at: "2023-05-16T22:30:30.495Z",
     updated_at: "2023-05-16T22:30:30.495Z",
   },
