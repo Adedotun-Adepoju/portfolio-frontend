@@ -107,17 +107,6 @@
       @closeModal="closeProjectDescriptionModal"
     >
     </ViewProject>
-    <footer>
-      <p>Contact</p>
-      <div class="contact" id="contact">
-        <template v-for="(contact, index) in contacts" :key="index">
-          <img
-            :src="require(`../assets/img/${contact.name}.svg`)"
-            @click="redirectContact(index)"
-          />
-        </template>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -157,13 +146,7 @@ export default {
           label: "PROJECTS",
         },
         experiences: {
-          label: "EXPERIENCES",
-        },
-        contact: {
-          label: "CONTACT",
-        },
-        resume: {
-          label: "RESUME",
+          label: "EXPERIENCE",
         },
       },
       icons: ["red", "yellow", "green"],

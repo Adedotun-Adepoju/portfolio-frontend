@@ -3,7 +3,8 @@ export const projects = [
     name: "Music streaming data pipeline",
     description:
       "A streaming data pipeline set up to monitor streams from a music event generator. Events are published to Apache Kafka and Apache Spark was configured to consume and process this data. View more about the project below",
-    image_link: "https://scx2.b-cdn.net/gfx/news/hires/2016/578650fe544c4.jpg",
+    image_link:
+      "https://assets-global.website-files.com/616e938268c8f0a92cb2b540/616e938268c8f02b2db2c3ca_add%2520music%2520to%2520video%2520pink%2520headphones-p-1600.jpeg",
     year: 2023,
     skills: ["Apache Kafka", "Apache Spark", "Airflow", "Python", "Gcp"],
     github_link: "https://github.com/Adedotun-Adepoju/music-streaming-pipeline",
