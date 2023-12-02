@@ -137,8 +137,8 @@ export default {
   },
 
   async mounted() {
-    await this.$store.dispatch("fetchProjects");
-    await this.$store.dispatch("fetchExperiences");
+    // await this.$store.dispatch("fetchProjects");
+    // await this.$store.dispatch("fetchExperiences");
     this.loaded = true;
   },
 

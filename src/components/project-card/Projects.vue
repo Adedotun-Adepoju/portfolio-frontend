@@ -13,8 +13,8 @@
     </div>
     <div class="project-description">
       <p @click="viewProject">View description</p>
-      <p @click="goToGithub">View project code</p>
-      <p @click="goToDemo">View Dashboard</p>
+      <p @click="goToGithub">View code</p>
+      <p @click="goToDemo">View Project</p>
     </div>
   </div>
 </template>
@@ -59,6 +59,9 @@ export default {
     goToDemo() {
       window.open(this.demoLink);
     },
+  },
+  mounted() {
+    console.log(this.imageLink);
   },
 };
 </script>
