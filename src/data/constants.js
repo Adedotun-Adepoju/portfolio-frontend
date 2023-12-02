@@ -1,5 +1,17 @@
 export const projects = [
   {
+    name: "AI-powered symptom and diagnostic app",
+    description:
+      "An application that allows patients to describe their symptoms and receive preliminary medical advice from an AI-powered chatbot",
+    image_link: "https://svgur.com/i/10Pc.svg",
+    year: 2023,
+    skills: ["Typescript", "NestJS", "HTML", "CSS", "JAVASCRIPT"],
+    github_link: "https://github.com/Adedotun-Adepoju/AIDoc",
+    demo_link: "https://ai-doc-tau.vercel.app/",
+    created_at: "2023-05-16T22:30:30.495Z",
+    updated_at: "2023-05-16T22:30:30.495Z",
+  },
+  {
     name: "Music streaming data pipeline",
     description:
       "A streaming data pipeline set up to monitor streams from a music event generator. Events are published to Apache Kafka and Apache Spark was configured to consume and process this data. View more about the project below",

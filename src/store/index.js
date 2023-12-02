@@ -46,25 +46,25 @@ export default store(function (/* { ssrContext } */) {
         state.experiences = data;
       },
     },
-    actions: {
-      async fetchProjects({ commit }) {
-        try {
-          const response = await api.fetchProjects();
-          commit("FETCH_PROJECTS", response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      },
+    // actions: {
+    //   async fetchProjects({ commit }) {
+    //     try {
+    //       const response = await api.fetchProjects();
+    //       commit("FETCH_PROJECTS", response.data);
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   },
 
-      async fetchExperiences({ commit }) {
-        try {
-          const response = await api.fetchExperiences();
-          commit("FETCH_EXPERIENCES", response.data);
-        } catch (error) {
-          console.log(error);
-        }
-      },
-    },
+    //   async fetchExperiences({ commit }) {
+    //     try {
+    //       const response = await api.fetchExperiences();
+    //       commit("FETCH_EXPERIENCES", response.data);
+    //     } catch (error) {
+    //       console.log(error);
+    //     }
+    //   },
+    // },
 
     // enable strict mode (adds overhead!)
     // for dev mode and --debug builds only
