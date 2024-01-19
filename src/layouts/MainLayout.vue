@@ -232,7 +232,7 @@ export default {
     navigatePage(linkName) {
       if (linkName == "resume") {
         window.open(
-          "https://drive.google.com/file/d/1cnXBLnGl1pcNWeYhehFNrCgfljtZwlUA/view?usp=sharing"
+          "https://drive.google.com/file/d/1B2Mon3zoeAlM8JxTuMt9jVC2TsZKxSRD/view?usp=sharing"
         );
       } else {
         const element = document.getElementById(linkName);

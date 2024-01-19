@@ -56,17 +56,18 @@ export const projects = [
 export const experiences = [
   {
     company: "b54",
-    job_title: "Data Engineer",
+    job_title: "Backend Data Engineer",
     start_date: "2022-04-01",
     end_date: null,
     link: "https://b54.co/",
     roles: [
+      "Developed backend APIs using NestJS and AdonisJS frameworks, integrating with multiple third-party services such as Paystack, Mono and Boss Insights.",
+      "Eliminated 80% of manual tasks for credit underwriting by engineering backend services to automate the risk and credit analysis process",
+      "Implemented Automated unit tests using test frameworks such as Jest and AdonisJS testing framework to ensure adequate coverage of the backend codebase",
       "Ingested data from various sources. Implemented an automated ELT pipeline making it easier to wrangle data.",
       "Communicated with relevant stakeholders to understand needs, and translated feedbacks into actionable reports in Metabase",
-      "Eliminated 80% of manual tasks for credit underwriting by engineering backend services to automate the risk and credit analysis process",
-      "Integrated data from multiple third-party APIs that provided financial data, leading to better risk analysis.",
       "Developed machine learning models to predict the probability of loan defaults.",
-      "Implemented Automated unit tests using test frameworks such as Jest and AdonisJS testing framework to ensure adequate coverage of the backend codebase",
+      "Built frontend interfaces using Vue.js Quasar framework",
     ],
   },
   {
