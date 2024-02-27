@@ -56,18 +56,18 @@ export const projects = [
 export const experiences = [
   {
     company: "b54",
-    job_title: "Backend Data Engineer",
+    job_title: "Software Engineer",
     start_date: "2022-04-01",
     end_date: null,
     link: "https://b54.co/",
     roles: [
-      "Developed backend APIs using NestJS and AdonisJS frameworks, integrating with multiple third-party services such as Paystack, Mono and Boss Insights.",
-      "Eliminated 80% of manual tasks for credit underwriting by engineering backend services to automate the risk and credit analysis process",
-      "Implemented Automated unit tests using test frameworks such as Jest and AdonisJS testing framework to ensure adequate coverage of the backend codebase",
-      "Ingested data from various sources. Implemented an automated ELT pipeline making it easier to wrangle data.",
-      "Communicated with relevant stakeholders to understand needs, and translated feedbacks into actionable reports in Metabase",
-      "Developed machine learning models to predict the probability of loan defaults.",
-      "Built frontend interfaces using Vue.js Quasar framework",
+      "Developed and maintained RESTful APIs using NestJS and Node.js, handling authentication, authorization and data validation for a fintech platform",
+      "Implemented feature flags to enable controlled roll-out of features, resulting in a 20% reduction in post-release issues and providing the ability to gather user feedback for iterative improvements",
+      "Conducted code reviews and provided constructive feedback to team members, contributing to a higher standard of code quality",
+      "Collaborated effectively with stakeholders in developing a loan management system, designing and implementing server-side logic in NestJS and AdonisJS",
+      "Implemented automated testing procedures, resulting in a 40% reduction in bugs and improved software reliability",
+      "Assisted in the development of responsive and accessible user interfaces using HTML, CSS and Vue.js.",
+      "Collaborated with frontend developers to integrate backend functionality, ensuring seamless communication and a cohesive user experience",
     ],
   },
   {
